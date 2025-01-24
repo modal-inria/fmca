@@ -161,9 +161,12 @@ compute_optimal_encoding <- function(
   }
 
   if (is.complex(out$eigenvalues)) {
-    warning("Eigenvalues contain complex values. Only the real part is returned.")
+    warning("Eigenvalues contain complex values. Only the real part is returned for eigenvalues, pc and alpha.")
     out$eigenvalues <- Re(out$eigenvalues)
     out$pc <- Re(out$pc)
+    for (i in seq_along(out$alpha)) {
+      out$alpha[[i]] <- Re(out$alpha[[i]])
+    }
   }
 
   class(out) <- "fmca"
