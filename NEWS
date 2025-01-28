@@ -1,7 +1,10 @@
+v0.12.1 2025-01-24
+- remove complex part from alpha
+
 v0.12.0 2024-11-20
 - add function to reconstruct indicators using encoding
 - use ML estimator of covariance (/n instead of n-1)
-- take real part when there are complex value
+- take real part when there are complex values
 - add timeValues parameter to estimate_pt
 - plotData can plot 1 individual
 - Some functions accept tibble
